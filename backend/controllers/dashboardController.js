@@ -1,7 +1,7 @@
 const Product = require("../models/product");
 const Order = require("../models/Order");
 const User = require("../models/User");
-const CustomOrder = require("../models/customOrder");
+const CustomOrder = require("../models/CustomOrder");
 
 const getDashboardStats = async (req, res) => {
   try {
