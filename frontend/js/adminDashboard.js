@@ -14,7 +14,7 @@ const summaryCustomOrders = document.getElementById("summaryCustomOrders");
 
 const loadDashboard = async () => {
   try {
-    const statsResponse = await fetch("http://localhost:5000/api/dashboard");
+    const statsResponse = await fetch("https://oviu-website.onrender.com/api/dashboard");
     const stats = await statsResponse.json();
 
     totalProducts.textContent = stats.totalProducts;
@@ -30,7 +30,7 @@ const loadDashboard = async () => {
     summaryOrders.textContent = `${stats.totalOrders} orders received`;
     summaryCustomOrders.textContent = `${stats.totalCustomOrders} custom requests`;
 
-    const ordersResponse = await fetch("http://localhost:5000/api/orders");
+    const ordersResponse = await fetch("https://oviu-website.onrender.com/api/orders");
     const orders = await ordersResponse.json();
 
     latestOrdersTable.innerHTML = "";

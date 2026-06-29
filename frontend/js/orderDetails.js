@@ -5,7 +5,7 @@ const orderId = params.get("id");
 
 const loadOrder = async () => {
   try {
-    const response = await fetch(`http://localhost:5000/api/orders/${orderId}`);
+    const response = await fetch(`https://oviu-website.onrender.com/api/orders/${orderId}`);
     const order = await response.json();
 
     let productsHTML = "";
@@ -106,7 +106,7 @@ const updateOrder = async () => {
   const paymentStatus = document.getElementById("paymentStatus").value;
 
   try {
-    const response = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+    const response = await fetch(`https://oviu-website.onrender.com/api/orders/${orderId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

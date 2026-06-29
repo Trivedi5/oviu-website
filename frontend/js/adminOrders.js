@@ -2,7 +2,7 @@ const adminOrdersTable = document.getElementById("adminOrdersTable");
 
 const loadAdminOrders = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/orders");
+    const response = await fetch("https://oviu-website.onrender.com/api/orders");
     const orders = await response.json();
 
     adminOrdersTable.innerHTML = "";

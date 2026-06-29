@@ -60,7 +60,7 @@ async function markPaid() {
 
     if(orderId){
 
-        await fetch(`http://localhost:5000/api/orders/${orderId}/pay`,{
+        await fetch(`https://oviu-website.onrender.com/api/orders/${orderId}/pay`,{
             method:"PUT"
         });
 

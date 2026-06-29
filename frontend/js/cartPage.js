@@ -14,7 +14,7 @@ const getCartImageUrl = (image) => {
     return `../images/${image}`;
   }
 
-  return `http://localhost:5000/uploads/${image}`;
+  return `https://oviu-website.onrender.com/uploads/${image}`;
 };
 
 const getCart = () => {

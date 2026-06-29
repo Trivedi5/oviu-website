@@ -15,7 +15,7 @@ logoutBtn.addEventListener("click", () => {
 
 const loadMyCustomOrders = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/custom-orders");
+    const response = await fetch("https://oviu-website.onrender.com/api/custom-orders");
     const orders = await response.json();
 
     const myOrders = orders.filter(order => order.customer.email === user.email);

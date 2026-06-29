@@ -2,7 +2,7 @@ const adminCustomOrdersTable = document.getElementById("adminCustomOrdersTable")
 
 const fileUrl = (filename) => {
   if (!filename) return "";
-  return `http://localhost:5000/uploads/custom-orders/${filename}`;
+  return `https://oviu-website.onrender.com/uploads/custom-orders/${filename}`;
 };
 
 const fileLink = (filename, label) => {
@@ -17,7 +17,7 @@ const fileLink = (filename, label) => {
 
 const loadCustomOrders = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/custom-orders");
+    const response = await fetch("https://oviu-website.onrender.com/api/custom-orders");
     const orders = await response.json();
 
     adminCustomOrdersTable.innerHTML = "";

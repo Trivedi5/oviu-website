@@ -26,7 +26,7 @@ function getCheckoutCart() {
 function getCheckoutImageUrl(image) {
   if (!image) return "../images/logo.jpg";
   if (localImages.includes(image)) return `../images/${image}`;
-  return `http://localhost:5000/uploads/${image}`;
+  return `https://oviu-website.onrender.com/uploads/${image}`;
 }
 
 function renderCheckout() {
@@ -105,7 +105,7 @@ checkoutForm.addEventListener("submit", async (e) => {
     checkoutMessage.textContent = "Creating order...";
     checkoutMessage.style.color = "black";
 
-    const orderResponse = await fetch("http://localhost:5000/api/orders", {
+    const orderResponse = await fetch("https://oviu-website.onrender.com/api/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -124,7 +124,7 @@ checkoutForm.addEventListener("submit", async (e) => {
     checkoutMessage.textContent = "Redirecting to Stripe...";
     checkoutMessage.style.color = "green";
 
-    const stripeResponse = await fetch("http://localhost:5000/api/payments/create-checkout-session", {
+    const stripeResponse = await fetch("https://oviu-website.onrender.com/api/payments/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

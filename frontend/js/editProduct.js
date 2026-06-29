@@ -6,7 +6,7 @@ const productId = params.get("id");
 
 const loadProductDetails = async () => {
   try {
-    const response = await fetch(`http://localhost:5000/api/products/${productId}`);
+    const response = await fetch(`https://oviu-website.onrender.com/api/products/${productId}`);
     const product = await response.json();
 
     document.getElementById("name").value = product.name;
@@ -34,7 +34,7 @@ editProductForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch(`http://localhost:5000/api/products/${productId}`, {
+    const response = await fetch(`https://oviu-website.onrender.com/api/products/${productId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

@@ -9,12 +9,12 @@ const getAdminImageUrl = (image) => {
     return `../images/${image}`;
   }
 
-  return `http://localhost:5000/uploads/${image}`;
+  return `https://oviu-website.onrender.com/uploads/${image}`;
 };
 
 const loadAdminProducts = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/products");
+    const response = await fetch("https://oviu-website.onrender.com/api/products");
     const products = await response.json();
 
     adminProductsTable.innerHTML = "";
@@ -52,7 +52,7 @@ const deleteProduct = async (id) => {
   if (!confirmDelete) return;
 
   try {
-    const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+    const response = await fetch(`https://oviu-website.onrender.com/api/products/${id}`, {
       method: "DELETE",
     });
 

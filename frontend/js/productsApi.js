@@ -10,12 +10,12 @@ const getImageUrl = (image) => {
     return `../images/${image}`;
   }
 
-  return `http://localhost:5000/uploads/${image}`;
+  return `https://oviu-website.onrender.com/uploads/${image}`;
 };
 
 const loadProducts = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/products");
+    const response = await fetch("https://oviu-website.onrender.com/api/products");
     const products = await response.json();
 
     apiProductsGrid.innerHTML = "";
