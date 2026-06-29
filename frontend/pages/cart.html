@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVIU | Cart</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="custom-order.html">Custom Order</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button>EN</button>
+    <a href="cart.html"><button id="cartCountBtn">Cart 0</button></a>
+    <a href="login.html"><button>Login</button></a>
+  </div>
+</header>
+
+<section class="cart-page">
+  <div class="cart-items">
+    <h1>Shopping Cart</h1>
+    <p>Review your selected products before checkout.</p>
+
+    <div id="cartItemsContainer"></div>
+  </div>
+
+  <div class="cart-summary">
+    <h2>Order Summary</h2>
+
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <strong id="cartSubtotal">$0.00</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Shipping</span>
+      <strong id="cartShipping">$0.00</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Tax</span>
+      <strong id="cartTax">$0.00</strong>
+    </div>
+
+    <hr>
+
+    <div class="summary-row total">
+      <span>Total</span>
+      <strong id="cartTotal">$0.00</strong>
+    </div>
+
+    <a href="checkout.html">
+      <button class="dark-btn full">Proceed to Checkout</button>
+    </a>
+
+    <a href="products.html" class="continue-link">Continue Shopping</a>
+  </div>
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>OVIU</h2>
+      <p>Premium custom apparel, gift boxes, promotional products and branded merchandise.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="products.html">Corporate Gifts</a>
+      <a href="products.html">Bulk Orders</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <p>Subscribe for product updates and offers.</p>
+      <input type="email" placeholder="Email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 OVIU Custom Apparel & 3D Printing. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/navbar.js"></script>
+<script src="../js/cartPage.js"></script>
+</body>
+</html>

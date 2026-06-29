@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Admin Orders</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <img src="../images/logo.jpg" alt="OVIU Logo">
+      <h2>OVIU Admin</h2>
+    </div>
+
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="admin-products.html">Products</a>
+      <a class="active" href="admin-orders.html">Orders</a>
+      <a href="admin-customers.html">Customers</a>
+      <a href="add-product.html">Add Product</a>
+      <a href="../index.html">Website</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <h1>Orders</h1>
+        <p>Manage customer orders from MongoDB.</p>
+      </div>
+
+      <button class="dark-btn">Export Orders</button>
+    </div>
+
+    <div class="admin-panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Order</th>
+            <th>Customer</th>
+            <th>Email</th>
+            <th>Total</th>
+            <th>Payment</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminOrdersTable">
+          <tr>
+            <td colspan="8">Loading orders...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+<script src="../js/adminGuard.js"></script>
+<script src="../js/adminOrders.js"></script>
+</body>
+</html>

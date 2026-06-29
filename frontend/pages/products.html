@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVIU | Products</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="custom-order.html">Custom Order</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button>EN</button>
+    <a href="cart.html"><button>Cart 0</button></a>
+    <a href="login.html"><button>Login</button></a>
+  </div>
+</header>
+
+<section class="products-page">
+
+  <aside class="sidebar">
+    <h3>CATEGORIES</h3>
+    <div class="side-link active">All Products</div>
+    <div class="side-link">T-Shirts</div>
+    <div class="side-link">Hoodies</div>
+    <div class="side-link">Phone Covers</div>
+    <div class="side-link">Gift Boxes</div>
+    <div class="side-link">Caps</div>
+
+    <hr>
+
+    <h3>FILTER BY</h3>
+    <p class="filter-title">PRODUCT TYPE</p>
+
+    <label><input type="checkbox"> T-Shirts</label>
+    <label><input type="checkbox"> Hoodies</label>
+    <label><input type="checkbox"> Phone Covers</label>
+    <label><input type="checkbox"> Gift Boxes</label>
+    <label><input type="checkbox"> Caps</label>
+
+    <p class="filter-title">PRICE RANGE</p>
+    <input type="range" min="10" max="200" value="100" class="range">
+
+    <div class="price-row">
+      <span>$10</span>
+      <span>$200 max</span>
+    </div>
+
+    <p class="filter-title">COLORS</p>
+
+    <div class="color-row">
+      <span class="color black"></span>
+      <span class="color white"></span>
+      <span class="color red"></span>
+      <span class="color blue"></span>
+      <span class="color green"></span>
+      <span class="color yellow"></span>
+    </div>
+
+    <button class="reset-btn">Reset filters</button>
+  </aside>
+
+  <main class="product-main">
+    <div class="product-top">
+      <div>
+        <h1>All Products</h1>
+        <p>High quality custom products made for you.</p>
+        <small id="productCount">Loading products...</small>
+      </div>
+
+      <div>
+        <label>Sort by:</label>
+        <select>
+          <option>Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="all-products-grid" id="apiProductsGrid"></div>
+  </main>
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>OVIU</h2>
+      <p>Premium custom apparel, gift boxes, promotional products and branded merchandise.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="products.html">Corporate Gifts</a>
+      <a href="products.html">Bulk Orders</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <p>Subscribe for product updates and offers.</p>
+      <input type="email" placeholder="Email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 OVIU Custom Apparel & 3D Printing. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/navbar.js"></script>
+<script src="../js/toast.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/productsApi.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Admin Products</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="admin-sidebar">
+
+    <div class="admin-logo">
+      <img src="../images/logo.jpg" alt="OVIU Logo">
+      <h2>OVIU Admin</h2>
+    </div>
+
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a class="active" href="admin-products.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-customers.html">Customers</a>
+      <a href="add-product.html">Add Product</a>
+      <a href="../index.html">Website</a>
+      <a href="login.html">Logout</a>
+    </nav>
+
+  </aside>
+
+  <main class="admin-main">
+
+    <div class="admin-top">
+      <div>
+        <h1>Products</h1>
+        <p>Manage all products stored in MongoDB.</p>
+      </div>
+
+      <a href="add-product.html">
+        <button class="dark-btn">+ Add Product</button>
+      </a>
+    </div>
+
+    <div class="admin-panel">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminProductsTable">
+          <tr>
+            <td colspan="6">Loading products...</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </main>
+
+</div>
+<script src="../js/toast.js"></script>
+<script src="../js/adminGuard.js"></script>
+<script src="../js/adminProducts.js"></script>
+</body>
+</html>

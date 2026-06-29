@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<section class="admin-layout">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <img src="../images/logo.jpg" alt="OVIU Logo">
+      <h2>OVIU Admin</h2>
+    </div>
+
+    <nav>
+      <a class="active" href="admin-dashboard.html">Dashboard</a>
+      <a href="admin-products.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-custom-orders.html">Custom Orders</a>
+      <a href="admin-customers.html">Customers</a>
+      <a href="../index.html">View Website</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Live overview of OVIU products, orders, customers and revenue.</p>
+      </div>
+
+      <a href="add-product.html">
+        <button class="dark-btn">Add Product</button>
+      </a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <p>Total Products</p>
+        <h2 id="totalProducts">0</h2>
+        <span>Stored in MongoDB</span>
+      </div>
+
+      <div class="stat-card">
+        <p>Total Orders</p>
+        <h2 id="totalOrders">0</h2>
+        <span id="pendingOrders">0 pending</span>
+      </div>
+
+      <div class="stat-card">
+        <p>Revenue</p>
+        <h2 id="totalRevenue">$0.00</h2>
+        <span>Paid orders only</span>
+      </div>
+
+      <div class="stat-card">
+        <p>Customers</p>
+        <h2 id="totalCustomers">0</h2>
+        <span>Registered users</span>
+      </div>
+
+      <div class="stat-card">
+        <p>Custom Orders</p>
+        <h2 id="totalCustomOrders">0</h2>
+        <span id="pendingCustomOrders">0 pending</span>
+      </div>
+    </div>
+
+    <div class="admin-content-grid">
+      <div class="admin-panel">
+        <h2>Latest Orders</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>Customer</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="latestOrdersTable">
+            <tr>
+              <td colspan="4">Loading latest orders...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="admin-panel">
+        <h2>Business Summary</h2>
+
+        <div class="top-product">
+          <div>
+            <h4>Products</h4>
+            <p id="summaryProducts">0 products available</p>
+          </div>
+        </div>
+
+        <div class="top-product">
+          <div>
+            <h4>Orders</h4>
+            <p id="summaryOrders">0 orders received</p>
+          </div>
+        </div>
+
+        <div class="top-product">
+          <div>
+            <h4>Custom Requests</h4>
+            <p id="summaryCustomOrders">0 custom requests</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</section>
+
+<script src="../js/adminGuard.js"></script>
+<script src="../js/adminDashboard.js"></script>
+</body>
+</html>

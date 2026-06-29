@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVIU | Admin Customers</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <img src="../images/logo.jpg" alt="OVIU Logo">
+            <h2>OVIU Admin</h2>
+        </div>
+
+        <nav>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-products.html">Products</a>
+            <a href="admin-orders.html">Orders</a>
+            <a class="active" href="admin-customers.html">Customers</a>
+            <a href="../index.html">View Website</a>
+            <a href="login.html">Logout</a>
+        </nav>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <div class="admin-top">
+            <div>
+                <h1>Customers</h1>
+                <p>Manage registered customers.</p>
+            </div>
+
+            <button class="dark-btn">+ Add Customer</button>
+        </div>
+
+        <div class="admin-panel">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Orders</th>
+                        <th>Joined</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Maharshi Trivedi</td>
+                        <td>maharshi@email.com</td>
+                        <td>+1 (514) 123-4567</td>
+                        <td>8</td>
+                        <td>Jun 2026</td>
+                        <td><span class="status completed">Active</span></td>
+                        <td><button class="edit-btn">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya Patel</td>
+                        <td>priya@email.com</td>
+                        <td>+1 (438) 555-2211</td>
+                        <td>3</td>
+                        <td>May 2026</td>
+                        <td><span class="status completed">Active</span></td>
+                        <td><button class="edit-btn">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Alex Martin</td>
+                        <td>alex@email.com</td>
+                        <td>+1 (450) 987-6543</td>
+                        <td>1</td>
+                        <td>Jun 2026</td>
+                        <td><span class="status pending">New</span></td>
+                        <td><button class="edit-btn">View</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+<script src="../js/adminGuard.js"></script>
+</body>
+</html>

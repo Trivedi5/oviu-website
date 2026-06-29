@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Payment Successful</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="custom-order.html">Custom Order</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="cart.html"><button>Cart</button></a>
+    <a href="login.html"><button>Login</button></a>
+  </div>
+</header>
+
+<section class="success-page">
+  <div class="success-card">
+
+    <h1>🎉 Payment Successful!</h1>
+
+    <p>
+      Thank you for shopping with <strong>OVIU</strong>.
+      Your payment has been received successfully.
+    </p>
+
+    <div id="successOrderDetails"></div>
+
+    <br>
+
+    <a href="products.html">
+      <button class="dark-btn">Continue Shopping</button>
+    </a>
+
+  </div>
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const orderId = params.get("orderId");
+
+const lastOrder = JSON.parse(localStorage.getItem("lastOrder"));
+
+const details = document.getElementById("successOrderDetails");
+
+async function markPaid() {
+
+    if(orderId){
+
+        await fetch(`http://localhost:5000/api/orders/${orderId}/pay`,{
+            method:"PUT"
+        });
+
+    }
+
+}
+
+markPaid();
+
+if(lastOrder){
+
+details.innerHTML = `
+<h3>Order Details</h3>
+
+<p><strong>Order ID:</strong> ${lastOrder._id}</p>
+
+<p><strong>Name:</strong>
+${lastOrder.customer.firstName}
+${lastOrder.customer.lastName}
+</p>
+
+<p><strong>Email:</strong>
+${lastOrder.customer.email}
+</p>
+
+<p><strong>Total Paid:</strong>
+$${lastOrder.total.toFixed(2)}
+</p>
+
+<p style="color:green;font-weight:bold;">
+Payment Status : Paid ✅
+</p>
+
+`;
+
+localStorage.removeItem("cart");
+
+}
+
+</script>
+
+</body>
+</html>

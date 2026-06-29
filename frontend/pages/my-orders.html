@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | My Orders</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="custom-order.html">Custom Order</a>
+    <a href="customer-dashboard.html">My Account</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="cart.html"><button>Cart</button></a>
+    <button id="logoutBtn">Logout</button>
+  </div>
+</header>
+
+<section class="customer-dashboard">
+  <div class="customer-card orders-card">
+    <h1>My Orders</h1>
+    <p>View your previous orders and payment status.</p>
+
+    <div id="myOrdersContainer">Loading orders...</div>
+
+    <br>
+
+    <a href="customer-dashboard.html">
+      <button class="light-btn full">Back to My Account</button>
+    </a>
+  </div>
+</section>
+<script src="../js/navbar.js"></script>
+<script src="../js/myOrders.js"></script>
+</body>
+</html>

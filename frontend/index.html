@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVIU | Custom Apparel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="pages/about.html">About Us</a>
+    <a href="pages/products.html">Products</a>
+    <a href="pages/gallery.html">Gallery</a>
+    <a href="pages/contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button>EN</button>
+    <button>Cart 0</button>
+    <button>Order</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="tagline">Custom Apparel & Premium Gifts</p>
+    <h1>Create Custom Apparel & Premium Gifts For Your Brand</h1>
+    <p>
+      Design custom t-shirts, hoodies, phone covers, gift boxes and promotional
+      products with high quality printing and premium packaging.
+    </p>
+    <div class="hero-buttons">
+     <a href="pages/products.html">
+  <button class="dark-btn">Shop Products</button>
+</a>
+
+<a href="pages/custom-order.html">
+  <button class="light-btn">Start Custom Order</button>
+</a>
+    </div>
+  </div>
+
+  <div class="hero-product">
+    <img src="images/box.jpg" alt="Luxury Gift Box">
+    <h3>Luxury Gift Box</h3>
+    <p>Premium Gift Package</p>
+    <strong>From $75.00</strong>
+    <button class="dark-btn full" onclick='addToCart({
+  "_id": "home-luxury-gift-box",
+  "name": "Luxury Gift Box",
+  "price": 75,
+  "image": "box.jpg",
+  "quantity": 1
+})'>Add to cart</button>
+  </div>
+</section>
+
+<section class="categories">
+  <h2>Popular Categories</h2>
+  <p>High quality custom products made for you.</p>
+
+  <div class="category-grid">
+    <div>T-Shirts</div>
+    <div>Hoodies</div>
+    <div>Phone Covers</div>
+    <div>Gift Boxes</div>
+    <div>Corporate Gifts</div>
+    <div>Custom Merchandise</div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="section-header">
+    <div>
+      <h2>Featured Products</h2>
+      <p>Showing popular items from our custom collection.</p>
+    </div>
+    <button class="light-btn">View All</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>OVIU</h2>
+      <p>Premium custom apparel, gift boxes, promotional products and branded merchandise.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="pages/products.html">Products</a>
+      <a href="pages/gallery.html">Gallery</a>
+      <a href="pages/contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <a href="pages/custom-order.html">Custom Orders</a>
+      <a href="pages/products.html">Corporate Gifts</a>
+      <a href="pages/products.html">Bulk Orders</a>
+      <a href="pages/faq.html">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <p>Subscribe for product updates and offers.</p>
+      <input type="email" placeholder="Email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 OVIU Custom Apparel & 3D Printing. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/toast.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/navbarHome.js"></script>
+<script src="js/homeApi.js"></script>
+</body>
+</html>

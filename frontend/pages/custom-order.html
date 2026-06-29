@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVIU | Custom Order</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button>EN</button>
+    <button>Cart 0</button>
+    <button>Order</button>
+  </div>
+</header>
+
+<section class="custom-hero">
+  <h1>Start a Custom Order</h1>
+  <p>
+    Upload your logo or artwork, choose your product, and submit your request.
+    Our team will prepare a custom design and quote.
+  </p>
+</section>
+
+<section class="custom-order-page">
+
+  <div class="custom-preview">
+    <h2>Live Preview</h2>
+    <p>Your uploaded design will appear on the product mockup.</p>
+
+    <div class="preview-box">
+      <img id="productMockup" src="../images/tshirt.jpg" alt="Product Preview">
+      <img id="uploadedDesign" src="" alt="">
+    </div>
+
+    <div class="preview-note">
+      <strong>Selected Product:</strong>
+      <span id="selectedProductText">T-Shirt</span>
+    </div>
+  </div>
+
+  <form class="custom-form">
+
+    <h2>Order Details</h2>
+
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="text" placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+      <label>Select Product</label>
+      <select id="productSelect">
+        <option value="tshirt" data-img="../images/tshirt.jpg">T-Shirt</option>
+        <option value="hoodie" data-img="../images/hoodie.jpg">Hoodie</option>
+        <option value="phone" data-img="../images/phone-cover.jpg">Phone Cover</option>
+        <option value="box" data-img="../images/box.jpg">Gift Box</option>
+        <option value="cap" data-img="../images/cap.jpg">Cap</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" min="1" value="1">
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Color</label>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+          <option>Red</option>
+          <option>Gold</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+  <label>Company Logo</label>
+  <input type="file" id="logoFile" accept="image/*">
+</div>
+
+<div class="form-group">
+  <label>Artwork / Design</label>
+  <input type="file" id="artworkFile" accept="image/*">
+</div>
+
+<div class="form-group">
+  <label>Reference Image (Optional)</label>
+  <input type="file" id="referenceFile" accept="image/*">
+</div>
+
+    <div class="form-group">
+      <label>Special Instructions</label>
+      <textarea rows="5" placeholder="Describe your custom design, placement, size, text, colors, or packaging details..."></textarea>
+    </div>
+
+    <button type="submit" class="dark-btn full">Submit Custom Order</button>
+
+  </form>
+
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>OVIU</h2>
+      <p>Premium custom apparel, gift boxes, promotional products and branded merchandise.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="products.html">Corporate Gifts</a>
+      <a href="products.html">Bulk Orders</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <p>Subscribe for product updates and offers.</p>
+      <input type="email" placeholder="Email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 OVIU Custom Apparel & 3D Printing. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const productSelect = document.getElementById("productSelect");
+  const productMockup = document.getElementById("productMockup");
+  const selectedProductText = document.getElementById("selectedProductText");
+  const designUpload = document.getElementById("designUpload");
+  const uploadedDesign = document.getElementById("uploadedDesign");
+
+  productSelect.addEventListener("change", function () {
+    const selectedOption = productSelect.options[productSelect.selectedIndex];
+    productMockup.src = selectedOption.dataset.img;
+    selectedProductText.textContent = selectedOption.text;
+  });
+
+  designUpload.addEventListener("change", function () {
+    const file = designUpload.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        uploadedDesign.src = e.target.result;
+        uploadedDesign.style.display = "block";
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+<script src="../js/navbar.js"></script>
+<script src="../js/toast.js"></script>
+<script src="../js/customOrder.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | FAQ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../images/logo.jpg" alt="OVIU Logo">
+    <h2>OVIU</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="custom-order.html">Custom Order</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button>EN</button>
+    <a href="cart.html"><button>Cart 0</button></a>
+    <a href="login.html"><button>Login</button></a>
+  </div>
+</header>
+
+<section class="faq-hero">
+  <h1>Frequently Asked Questions</h1>
+  <p>Find answers about custom orders, payments, shipping, returns, and corporate products.</p>
+</section>
+
+<section class="faq-page">
+
+  <div class="faq-item">
+    <button class="faq-question">How do I place a custom order?</button>
+    <div class="faq-answer">
+      <p>You can use the Custom Order page to choose a product, upload your logo or artwork, select quantity and color, and submit your instructions.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I upload my own logo or design?</button>
+    <div class="faq-answer">
+      <p>Yes. The custom order form allows customers to upload their own logo, artwork, or reference image for product customization.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do you accept bulk or corporate orders?</button>
+    <div class="faq-answer">
+      <p>Yes. OVIU supports bulk orders for businesses, events, corporate gifts, promotional products, and branded merchandise.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What payment method is used?</button>
+    <div class="faq-answer">
+      <p>The checkout page is prepared for Stripe payment integration, allowing secure online payment processing.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How long does delivery take?</button>
+    <div class="faq-answer">
+      <p>Delivery time depends on the product type, quantity, and customization requirements. Customers receive an estimated timeline after order confirmation.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I track my order?</button>
+    <div class="faq-answer">
+      <p>Order tracking will be available through the customer account section once the backend and order history features are connected.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>OVIU</h2>
+      <p>Premium custom apparel, gift boxes, promotional products and branded merchandise.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="products.html">Corporate Gifts</a>
+      <a href="products.html">Bulk Orders</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <p>Subscribe for product updates and offers.</p>
+      <input type="email" placeholder="Email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 OVIU Custom Apparel & 3D Printing. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/navbar.js"></script>
+<script>
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(question => {
+    question.addEventListener("click", () => {
+      question.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

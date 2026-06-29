@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Edit Product</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <img src="../images/logo.jpg" alt="OVIU Logo">
+      <h2>OVIU Admin</h2>
+    </div>
+
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a class="active" href="admin-products.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-customers.html">Customers</a>
+      <a href="add-product.html">Add Product</a>
+      <a href="../index.html">Website</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <h1>Edit Product</h1>
+        <p>Update product information in MongoDB.</p>
+      </div>
+
+      <a href="admin-products.html">
+        <button class="light-btn">Back to Products</button>
+      </a>
+    </div>
+
+    <div class="admin-panel">
+      <form id="editProductForm" class="admin-form">
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select name="category" id="category" required>
+            <option value="T-Shirts">T-Shirts</option>
+            <option value="Hoodies">Hoodies</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Gift Boxes">Gift Boxes</option>
+            <option value="Caps">Caps</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea name="description" id="description" rows="5" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" name="price" id="price" required>
+          </div>
+
+          <div class="form-group">
+            <label>Stock</label>
+            <input type="number" name="stock" id="stock" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Featured Product</label>
+          <select name="featured" id="featured">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <button type="submit" class="dark-btn full">Update Product</button>
+
+        <p id="editProductMessage" class="form-message"></p>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="../js/toast.js"></script>
+<script src="../js/adminGuard.js"></script>
+<script src="../js/editProduct.js"></script>
+</body>
+</html>

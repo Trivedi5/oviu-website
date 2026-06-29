@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVIU | Admin Custom Orders</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <img src="../images/logo.jpg" alt="OVIU Logo">
+      <h2>OVIU Admin</h2>
+    </div>
+
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="admin-products.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a class="active" href="admin-custom-orders.html">Custom Orders</a>
+      <a href="admin-customers.html">Customers</a>
+      <a href="add-product.html">Add Product</a>
+      <a href="../index.html">Website</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <h1>Custom Orders</h1>
+        <p>Review customer artwork, logos, notes, and request status.</p>
+      </div>
+    </div>
+
+    <div class="admin-panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Color</th>
+            <th>Files</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminCustomOrdersTable">
+          <tr>
+            <td colspan="7">Loading custom orders...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+
+<script src="../js/adminGuard.js"></script>
+<script src="../js/adminCustomOrders.js"></script>
+</body>
+</html>
